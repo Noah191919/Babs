@@ -3756,6 +3756,11 @@ td:last-child {
         color    : white;
     }
 
+    @media screen and (max-width: 500px) {
+        .s-intro__content-title {
+            color :	#FFA500 ;
+        }
+      }
     .s-intro__content-title br {
         display: none;
     }
