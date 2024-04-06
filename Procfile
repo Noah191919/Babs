@@ -1,0 +1,1 @@
+web: gunicorn Babs.wsgi --log-file -
