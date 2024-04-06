@@ -21,4 +21,13 @@ class AboutMe(models.Model):
 
     def __str__(self):
         return self.name
-    
+
+
+class Blog(models.Model):
+    title = models.CharField(max_length=255, null=True, blank=True)
+    text = models.TextField(max_length=1000, null=True, blank=True)
+    image = models.FileField(null=True, blank=True)
+    date = models.DateField(null=True, blank=True)
+
+    def __str__(self):
+        return self.title
