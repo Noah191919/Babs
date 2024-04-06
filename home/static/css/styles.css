@@ -3758,7 +3758,7 @@ td:last-child {
 
     @media screen and (max-width: 500px) {
         .s-intro__content-title {
-            color :	#FFA500 ;
+            color :	var(--color-btn-primary) ;
         }
       }
     .s-intro__content-title br {
