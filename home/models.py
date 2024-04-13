@@ -31,3 +31,13 @@ class Blog(models.Model):
 
     def __str__(self):
         return self.title
+    
+
+class Video(models.Model):
+    title = models.CharField(max_length=255, null=True, blank=True)
+    text = models.TextField(max_length=1000, null=True, blank=True)
+    video = models.FileField(null=True, blank=True)
+    date = models.DateField(null=True, blank=True)
+
+    def __str__(self):
+        return self.title

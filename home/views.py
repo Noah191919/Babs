@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from . models import AboutMe, Testimonies
 from . models import Blog
+from . models import Video
 
 # Create your views here.
 
@@ -8,9 +9,11 @@ def index(request):
     descriptions = AboutMe.objects.all()
     testimonies = Testimonies.objects.all()
     articles = Blog.objects.all()
+    videos = Video.objects.all()
     context = {
         'descrptions': descriptions, 
         'testimonies': testimonies,
         'articles': articles,
+        'videos': videos
     }
     return render(request, 'index.html', context)
