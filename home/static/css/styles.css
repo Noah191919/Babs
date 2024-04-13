@@ -4458,11 +4458,15 @@ td:last-child {
 }
 
 #blog video{
-    max-height: 380px;
+    max-height: 280px;
 }
 
 .card-body{
     margin-top: -80px;
+}
+
+#vid{
+    margin-top: -40px;
 }
 
 .card-text{

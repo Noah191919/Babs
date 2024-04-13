@@ -502,19 +502,22 @@
             <div class="row s-about__content">
                 <div class="column xl-12">    
                     
-                    <div class="section-header" data-num="03">
+                    <div class="section-header" data-num="04">
                         <h2 class="text-display-title">In the Lab.</h2>
                     </div> <!-- end section-header -->
                 </div> 
             </div>
+            
             <div class="row row-cols-1 row-cols-md-4">
                 {% for e in videos %}
                 <div class="col mb-4">
                   <div class="card" id='blog'>
+                    <a>
                     {% if e.video %}
                     <video controls="true" src="{{e.video.url}}" class="card-img-top" alt="...">
                     {% endif %}
-                    <div class="card-body">
+                    </a>
+                    <div class="card-body" id='vid'>
                       <h5 class="card-title">{{e.title}}</h5>
                       <p class="card-text">{{e.text}}</p>
                     </div>
