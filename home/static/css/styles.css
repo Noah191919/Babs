@@ -4451,6 +4451,7 @@ td:last-child {
 .entry__thumb img{
     width: 100%;
     max-height: 350px;
+    min-height: 350px;
 }
 
 #blog img{
@@ -4479,6 +4480,8 @@ td:last-child {
 }
 
 
-
+.entry__thumb img{
+    padding: 10px;
+}
 
 
