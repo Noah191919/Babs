@@ -4452,3 +4452,20 @@ td:last-child {
     width: 100%;
     max-height: 350px;
 }
+
+#blog img{
+    max-height: 250px;
+}
+
+.card-body{
+    margin-top: -80px;
+}
+
+.card-text{
+    font-weight: 100;
+}
+
+#date{
+    font-size: 1.5rem;
+    text-align: center;
+}

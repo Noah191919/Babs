@@ -7,8 +7,10 @@ from . models import Blog
 def index(request):
     descriptions = AboutMe.objects.all()
     testimonies = Testimonies.objects.all()
+    articles = Blog.objects.all()
     context = {
         'descrptions': descriptions, 
-        'testimonies': testimonies
+        'testimonies': testimonies,
+        'articles': articles,
     }
     return render(request, 'index.html', context)

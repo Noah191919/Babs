@@ -16,6 +16,7 @@
 
     <!-- CSS
     ================================================== -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'css/vendor.css' %}">
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 
@@ -25,6 +26,9 @@
     <link rel="icon" type="styleshout.com/static/image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="static/image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
 
 </head>
 
@@ -151,11 +155,20 @@
                     </div> <!-- end section-header -->
 
                     <p class="attention-getter">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas explicabo id debitis cupiditate cumque, error quia! Debitis cupiditate ipsa nihil labore, earum atque dolor quos saepe vero inventore, odit nam deleniti accusantium omnis mollitia consequatur harum incidunt! Ex modi aut repudiandae doloremque commodi recusandae labore sit. Perspiciatis omnis dolor dolores fuga iusto, recusandae animi nisi consequuntur exercitationem id maxime earum pariatur voluptas! Porro non quos quae tempora fuga quis sequi minus sed sint debitis reiciendis, nostrum natus suscipit iusto odio.
+                        I'm born and raised in Los Angeles, California. 
+                        I competed for Fairfax High School and head coach Harvey Kitani. I led the team to a City Championship. 
+                        I received First Team All-Conference honors after averaging 13 points and 10 rebounds per game. 
+                        After a sinlge season for Army at West Point(Division 1), 
+                        i went to the Black Knights. Shooting nearly 60 percent from the floor despite limited minutes i was on the leaderboard for blocks in the conference and had several game winning blocks.
                     </p>
 
                     <p class="attention-getter">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit. Ut enim ad minim     
+                        After that, i played one season at East LA(Junior College) for head coach John Mosely averaged 9.1 points, 7.0 rebounds and 1.1 blocks per game and led the Huskies to an overall record of 24-5 including a conference title and a trip to the SoCal playoff. 
+                        Shooting 55.5 percent from the floor and 38 percent from beyond the arc, i was picked up by University of Idaho(Division 1). 
+                    </p>
+                    <p class="attention-getter">
+                        For graduate school i was recruited by Daniel Eberhardt to attend Holy Names University(Division 2). I was Team captain alongside Austin Carter and i lead the team in several stats averaging 12 points a game, 8 rebounds per game and 1 block. 
+                        Post college career, i signed with DBI sports and had several offers in Spain and Portugal. I chose to sign with the Long Beach Blue Waves in the TBL conference in order to help out my family.
                     </p>
 
                     <div class="grid-list-items s-about__blocks">
@@ -190,7 +203,7 @@
                                 <li>
                                     <a href="#0">
                                         PAC-West player of the week
-                                        <span>Month? — 2023</span>
+                                        <span>March — 2023</span>
                                     </a>                                        
                                 </li>
                                 <li>
@@ -449,6 +462,41 @@
 
         </section> <!-- end s-numbers -->
 
+
+
+        <section id="about" class="s-about target-section">
+
+            <div class="row s-about__content">
+                <div class="column xl-12">    
+                    
+                    <div class="section-header" data-num="03">
+                        <h2 class="text-display-title">My Blog.</h2>
+                    </div> <!-- end section-header -->
+                </div> 
+            </div>
+
+            <div class="row row-cols-1 row-cols-md-4">
+                {% for e in articles %}
+                <div class="col mb-4">
+                  <div class="card" id='blog'>
+                    <img src="{{e.image.url}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">{{e.title}}</h5>
+                      <p class="card-text">{{e.text}}</p>
+                    </div>
+                    <div id="date">
+                    <p>{{e.date}}</p>
+                    </div>
+                  </div>
+                </div>
+                {% endfor %}           
+              </div>    
+               
+
+        </section>
+
+        <br>
+        
 
         <!-- # footer 
         ================================================== -->
